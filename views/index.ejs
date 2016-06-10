@@ -1,0 +1,30 @@
+<html>
+<head>
+<title></title>
+    <link rel='stylesheet' href='css/style.css' />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- <script type ="text/javascript" src="/socket.io/socket.io.js"></script> -->
+    <script type ="text/javascript">
+        $(document).ready(function (){
+
+  }); //end of document ready
+
+    </script>
+<style>
+
+</style>
+</head>
+<body>
+  <center>
+    <form id="post_form" action="/quotes" method="post">
+      <label>Your name: <input id="author" type='text' name='author'></label></br>
+      <label>Your quote: <textarea id="quote" name='quote'></textarea></label></br>
+      <input type='submit' value='Add my quote'>
+    </form>
+  </center>
+  <div id="users">
+  <button><a href="/quotes">Skip to quotes!</a></button>
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<html>
+<body>
+    <h2>Here are the awesome quotes:</h2>
+    <% if(typeof message != 'undefined') { %>
+      <span><%= message %><span>
+    <% } %>
+      <%
+      for(var index in quotes_list) { %>
+        <p>"<%= quotes_list[index].quote %>"</p>
+        <p>- <%= quotes_list[index].author %>at <%= quotes_list[index].created_at %></p>
+        <p>Likes: <%= quotes_list[index].likes %></p>
+        <form action="/likes" method="post">
+          <input type="hidden" name="id" value="<%= quotes_list[index].id %>">
+          <button type="submit">Like</button>
+        </form>
+      <% } %>
+        <button><a href="/">Go back</a></button>
+</body>
+</html>
